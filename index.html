@@ -3,133 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LegacyPathFinder - Discover Your Family’s Hidden Stories</title>
+  <meta name="description" content="Discover your family history with MyHeritage. Start building your family tree today!"/>
+  <title>Legacy Path Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    /* Pozadina */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f7f9fc;
-      color: #333;
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       min-height: 100vh;
-      padding: 0 1rem;
-    }
-    header {
-      background-color: #2a7ae2;
-      color: white;
-      padding: 2rem 1rem;
       text-align: center;
-      border-radius: 0 0 10px 10px;
+      padding: 2rem;
+      box-sizing: border-box;
     }
-    header h1 {
-      margin: 0 0 0.5rem;
-      font-size: 2.5rem;
-      line-height: 1.2;
+    /* Poluprozirna kutija */
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      max-width: 700px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     }
-    header p {
-      margin: 0;
-      font-size: 1.25rem;
-      font-weight: 300;
+    h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: #ffeb3b;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     }
-    main {
-      flex: 1;
-      max-width: 600px;
-      margin: 2rem auto;
-      text-align: center;
+    h2 {
+      font-weight: 400;
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     }
-    main p.description {
+    p {
       font-size: 1.1rem;
-      margin-bottom: 2rem;
-      line-height: 1.5;
+      line-height: 1.6;
+      margin: 1rem 0;
+      color: #ddd;
     }
-    .cta-button {
-      background-color: #2a7ae2;
-      color: white;
-      border: none;
-      padding: 1rem 2.5rem;
-      font-size: 1.2rem;
-      border-radius: 4px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 4px 8px rgba(42, 122, 226, 0.4);
-    }
-    .cta-button:hover {
-      background-color: #1d5bbf;
-      box-shadow: 0 6px 12px rgba(29, 91, 191, 0.6);
-    }
-    ul.features {
-      list-style-type: none;
+    ul {
+      list-style: none;
       padding: 0;
-      margin-top: 3rem;
+      margin: 1rem 0 2rem 0;
       text-align: left;
+      color: #fff;
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
     }
-    ul.features li {
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
+    ul li {
+      margin-bottom: 0.7rem;
+      padding-left: 1.2em;
       position: relative;
-      font-size: 1.1rem;
     }
-    ul.features li::before {
-      content: "✔";
-      color: #2a7ae2;
+    ul li::before {
+      content: '✓';
       position: absolute;
       left: 0;
+      color: #ffeb3b;
       font-weight: bold;
     }
+    a.cta-button {
+      display: inline-block;
+      background-color: #ffeb3b;
+      color: #222;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(255, 235, 59, 0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    a.cta-button:hover {
+      background-color: #fbc02d;
+      box-shadow: 0 6px 20px rgba(251, 192, 45, 0.8);
+    }
     footer {
-      background-color: #222;
-      color: #bbb;
-      text-align: center;
-      padding: 1rem 0;
+      margin-top: 2.5rem;
       font-size: 0.9rem;
-      margin-top: auto;
-      border-radius: 10px 10px 0 0;
+      color: #ccc;
+      text-align: center;
+      font-style: italic;
+      user-select: none;
     }
 
     /* Responsive */
-    @media (max-width: 640px) {
-      header h1 {
-        font-size: 1.8rem;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
       }
-      main {
-        margin: 1rem auto;
+      h2 {
+        font-size: 1.1rem;
       }
-      ul.features {
-        max-width: 100%;
+      .container {
+        padding: 2rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Discover Your Family’s Hidden Stories with LegacyPathFinder</h1>
-    <p>Unlock your ancestry and create your family tree with ease — start your journey today!</p>
-  </header>
-  <main>
-    <p class="description">
-      LegacyPathFinder is your personal gateway to uncovering family roots, discovering unique stories, and building a lasting legacy. No matter if you're just beginning or already exploring your heritage, our platform offers powerful tools to guide you every step of the way.
-    </p>
-    <button class="cta-button" id="ctaButton">Start Your Journey Today!</button>
-    <ul class="features">
-      <li>Easy to use, step-by-step guidance</li>
-      <li>Access billions of historical records</li>
-      <li>Discover DNA matches and unique family stories</li>
+  <div class="container">
+    <h1>Discover Your Family’s Hidden Stories</h1>
+    <h2>Unlock your ancestry and create your family tree with ease — starting at just €49!</h2>
+    <p>MyHeritage is the world’s leading genealogy platform, helping millions uncover their roots and connect with relatives worldwide.</p>
+    <p>Whether you're a beginner or a pro family historian, MyHeritage offers powerful tools to explore your heritage and build your family tree effortlessly.</p>
+    <ul>
+      <li>Step-by-step guidance</li>
+      <li>Billions of historical records</li>
+      <li>DNA matches & unique family stories</li>
     </ul>
-  </main>
-  <footer>
-    © 2025 LegacyPathFinder. All rights reserved.
-  </footer>
-
-  <script>
-    document.getElementById('ctaButton').addEventListener('click', () => {
-      alert('Welcome to LegacyPathFinder! This is a demo site with no live link yet.');
-    });
-  </script>
+    <a class="cta-button" href="https://your-affiliate-link.com" target="_blank" rel="noopener noreferrer">Start Your Journey Today</a>
+    <footer>
+      © 2025 LegacyPathFinder. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
+
