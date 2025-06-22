@@ -23,7 +23,6 @@
       box-sizing: border-box;
       position: relative;
     }
-    /* Slabiji overlay da slika više vidi */
     body::before {
       content: "";
       position: fixed;
@@ -33,37 +32,48 @@
     }
     .container {
       position: relative;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 3rem 2rem;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 3rem 2rem 4rem 2rem;
       border-radius: 15px;
       max-width: 700px;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
       z-index: 1;
+    }
+    /* Slika iznad naslova */
+    .header-image {
+      width: 100px;
+      margin: 0 auto 1.5rem auto;
+      display: block;
+      filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.7));
+      opacity: 0.85;
     }
     h1 {
       font-weight: 700;
       font-size: 2.8rem;
       margin-bottom: 0.5rem;
       color: #ffeb3b;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+      text-shadow: 3px 3px 8px rgba(0,0,0,1);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     h2 {
-      font-weight: 400;
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-bottom: 1.7rem;
       color: #fff;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
     }
     p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+      font-size: 1.15rem;
+      line-height: 1.7;
       margin: 1rem 0;
-      color: #ddd;
+      color: #e5e5e5;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     }
     ul {
       list-style: none;
       padding: 0;
-      margin: 1rem 0 2rem 0;
+      margin: 1rem 0 2.5rem 0;
       text-align: left;
       color: #fff;
       max-width: 400px;
@@ -71,16 +81,19 @@
       margin-right: auto;
     }
     ul li {
-      margin-bottom: 0.7rem;
-      padding-left: 1.2em;
+      margin-bottom: 0.8rem;
+      padding-left: 1.3em;
       position: relative;
+      font-weight: 600;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
     ul li::before {
       content: '✓';
       position: absolute;
       left: 0;
       color: #ffeb3b;
-      font-weight: bold;
+      font-weight: 900;
+      font-size: 1.2rem;
     }
     a.cta-button {
       display: inline-block;
@@ -88,40 +101,50 @@
       color: #222;
       font-weight: 700;
       padding: 1rem 2.5rem;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       border-radius: 30px;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(255, 235, 59, 0.6);
+      box-shadow: 0 5px 18px rgba(255, 235, 59, 0.7);
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
     a.cta-button:hover {
       background-color: #fbc02d;
-      box-shadow: 0 6px 20px rgba(251, 192, 45, 0.8);
+      box-shadow: 0 7px 22px rgba(251, 192, 45, 0.85);
     }
     footer {
-      margin-top: 2.5rem;
+      margin-top: 3rem;
       font-size: 0.9rem;
       color: #ccc;
       text-align: center;
       font-style: italic;
       user-select: none;
     }
-
     @media (max-width: 600px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       h2 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      ul {
+        max-width: 100%;
       }
       .container {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.5rem 3rem 1.5rem;
+      }
+      .header-image {
+        width: 80px;
+        margin-bottom: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <img class="header-image" src="https://cdn-icons-png.flaticon.com/512/252/252035.png" alt="World Map and Books" />
     <h1>Discover Your Family’s Hidden Stories</h1>
     <h2>Unlock your ancestry and create your family tree with ease — starting at just €49!</h2>
     <p>MyHeritage is the world’s leading genealogy platform, helping millions uncover their roots and connect with relatives worldwide.</p>
@@ -138,4 +161,3 @@
   </div>
 </body>
 </html>
-
